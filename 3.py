@@ -16,5 +16,8 @@ headers = {
 request = urllib.request.Request(url=url, headers=headers)
 response = urllib.request.urlopen(request)
 
-with open('haha.html', 'wb') as fp:
-	fp.write(response.read())
+#with open('haha.html', 'wb') as fp:
+#	fp.write(response.read())
+
+with open('haha.html', 'w', encoding='utf-8') as fp:
+	fp.write(response.read().decode('utf-8'))
